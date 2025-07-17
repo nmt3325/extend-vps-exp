@@ -25,7 +25,7 @@ try {
             await page.authenticate({ username, password })
         }
     }
-
+　　　await page.goto('https://www.ugtop.com/spill.shtml/', { waitUntil: 'networkidle2' })
     await page.goto('https://secure.xserver.ne.jp/xapanel/login/xvps/', { waitUntil: 'networkidle2' })
     await page.locator('#memberid').fill(process.env.EMAIL)
     await page.locator('#user_password').fill(process.env.PASSWORD)
